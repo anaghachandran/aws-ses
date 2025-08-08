@@ -42,7 +42,7 @@ jobs:
         run: |
           aws ses send-email \
             --from 'anaghachandran03@gmail.com' \
-            --destination 'ToAddresses="anaghachandran1987@gmail.com"' \
+            --destination 'ToAddresses="anaghachandran1897@gmail.com"' \
             --message 'Subject={Data="✅ Build Success - ${{ github.repository }}"},Body={Text={Data="Build for ${{ github.repository }} on branch `${{ github.ref_name}}` was successful!\n\nCommit: `${{ github.sha}}`\nWorkflow Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}}' \
             --region us-east-1 # Ensure this matches your aws-region above
 
@@ -51,6 +51,6 @@ jobs:
         run: |
           aws ses send-email \
             --from 'anaghachandran03@gmail.com' \
-            --destination 'ToAddresses="anaghachandran1987@gmail.com"' \
+            --destination 'ToAddresses="anaghachandran1897@gmail.com"' \
             --message 'Subject={Data="❌ Build FAILED - ${{ github.repository }}"},Body={Text={Data="*ALERT:* Build for ${{ github.repository }} on branch `${{ github.ref_name}}` *FAILED!*\n\nCommit: `${{ github.sha}}`\n*Please review logs:* ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}}' \
             --region us-east-1
